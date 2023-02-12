@@ -1,0 +1,957 @@
+
+@font-face {
+  font-family: 'steps';/* tipografia para el nombre Luis Stark */
+  src:url('../fonts/STEPS.ttf')format('truetype');
+}
+
+/* 
+font-family: 'Roboto', sans-serif;
+
+font-family: 'Poppins', sans-serif;
+
+font-family: 'Outfit', sans-serif;
+*/
+
+
+
+:root{
+   --color1:#090921 ;
+   --color2:#00abff;
+   --cbox:#10102A;
+   --shadow:13px 13px 35px #070718,
+             -13px -13px 35px #0b0b2a;
+   --cbutton:linear-gradient(45deg,#00abff,#af15ff);
+   
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--color1);
+}
+
+/*  marco que mostrar las imagenes en grande*/
+ .marco{
+     width: 100vw;
+     min-height:100vh; 
+     max-height:800px;
+     margin:auto;
+     margin-top:0;
+     margin-left:0;
+     background: var(--color1);     
+     position: fixed;
+     z-index: 1040;
+     display: flex;
+     flex-direction: column-reverse;
+     align-items: center;
+     justify-content: center;
+     transform: scale(0);
+     transition: all .3s;
+     
+ }
+ .actived_marco{
+     transform: scale(1);
+     transition: all .3s;
+ }
+  
+  .coint{
+      width: 350px;
+      height: 600px;
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+     justify-content: center;
+     
+  }
+  .box_btn_exit{
+      width: 300px;
+      height:100px;   
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   
+      
+  }.box_btn_exit button{
+      width: 50px;
+      height: 100%;
+      border-radius: 50%;
+      background: transparent;
+      outline: none;
+      border: none;
+      color:rgba(255,255,255,.8);
+      font-size: 30px;
+   
+    
+      
+  }.box_btn_exit button:hover{
+      color: red;
+  }
+  .coint .caja_img{
+  
+      width: 100%;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .coint .caja_img img{
+    height: 100%;
+     border-radius: 10px;
+  }
+
+    
+
+.container{  
+    max-width: 1024px;
+    margin: auto;
+    background: red;
+    position: relative;
+    background: var(--color1);
+    
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background: ;
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+}
+.header .menu{
+    display: none;
+}
+.btns{
+    
+    
+    background: transparent;
+    border: none;
+    color: white;
+    transition: all .3s;
+    margin-right: 30px;
+}
+.btns span{
+    font-size: 10px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+}
+.btns i{
+    display: none;
+}
+.btns:hover span{
+   
+    font-size: 13px;
+    background: var(--cbutton);
+    transition: .3s;
+}
+
+.btns:focus{
+    outline: none;
+}
+
+
+/* secciondonde estan mi foto de perfil y titulos */
+.seccion_perfil{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ background:linear-gradient(#090921,#000000 90%);
+}
+.foto{
+  width:50%;
+
+}
+.foto img{
+   width: 100%;
+}
+
+/* en eata eatara el nombre, y titulos grandes */
+.title{
+    width: 50%;
+   
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-left:1px solid white;
+   padding: 50px 0px 50px 20px;
+   background: ;
+}
+.title h4{
+    
+    font-weight: 200;
+    font-size: 10px;
+    padding: 0px 0px 20px 0px;
+    color: #e1e1e1;
+    font-family: 'steps';
+}
+.title h1{
+
+    font-family: 'steps';
+    letter-spacing: 5px;
+    font-weight: 200;
+    font-size: 3em;
+    
+    
+  background: #ff0000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00abff,#ff00c7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00abff, #ff00c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+
+
+    
+}
+.title h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: rgba(255,255,255,1);
+    font-size: 15px;
+    letter-spacing: 20px;
+}
+
+/* estilos de iconoa de redes sociales */
+
+.social_icons{
+    width: 80%;
+    max-width: 435px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
+.social_icons i {
+    color: #e7e7e7;
+    font-size:25px ;
+    transition: .3s;
+}
+
+.social_icons a:hover i{
+    font-size: 33px;
+    color: silver;
+}
+
+/* estilos del boton de llamada de accion */
+
+.box_cta{
+    width: 80%;
+    height: 50px;
+    background: var(--cbutton);
+    border-radius: 10px;
+    
+}
+.box_cta button{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    color: whitesmoke;
+    font-family: 'Poppins','sans-serif';
+}
+.box_cta:hover{
+    background: whitesmoke;
+}
+.box_cta:hover button{
+    color: #00abff;
+}
+
+
+
+
+.aboutme{
+    width: 100%;
+    padding-top: 100px;    
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+  background:linear-gradient(#000000 10%,#090921);
+}
+.aboutme .parrafo{
+    width: 50%;
+    display: block;
+    padding: 30px 30px 30px 30px;
+    background: var(--cbox);
+}
+.imagen{
+    width: 200px;
+    height: 350px;
+    overflow: hidden;
+     background: linear-gradient(45deg, #003292, #8e0092);
+    
+}
+.imagen img{
+    width: 250px;
+    object-fit: cover;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.aboutme h2{
+    color: white;
+    font-family: 'Outfit', sans-serif;
+     display: block;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+   
+}
+.aboutme p{
+    color: silver;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    text-align: left;
+}
+
+
+.services{
+    width: 100%;
+    grid-column: 1/3;
+    padding-top: 100px;
+}
+.services h2{
+    color: white;
+   font-family: 'Outfit', sans-serif;
+    
+    padding-left: 50px;
+}
+.services p{
+    color:silver;
+    width: 400px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    padding: 30px 30px 50px 30px;
+    font-weight: 400;
+   
+}
+
+
+
+ .container_services{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:3em;
+}
+.boxs{
+   min-height: 200px;
+ 
+   display: block;
+   position: relative;
+ 
+   transition:all .5s;
+   border-radius: 10px;
+   
+}
+
+
+
+
+
+/*
+estylo ds los fondos del boxs
+
+*/
+
+.fondo{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxs .fondo img{
+    width: 99%;
+    height: 99%;
+    object-fit: cover;
+    opacity: 100%;
+    z-index: 1;
+    border-radius: 10px;
+}
+.sub_Box{
+    width: 100%;
+    height: 100%;
+    background:rgba(16,16,42,1);
+    z-index: 3;
+    position: absolute;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+/*
+ definiendo los colores de cada fondo de la caja
+*/
+
+.boxs:hover .sub_Box{
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,46,.9) 60%);
+}
+
+
+.boxs span i{
+    color:var(--color2) ;
+    font-size: 30px;
+    padding: 20px;
+    transition:all .5s;
+    padding-top: 70px;
+    
+    background: #ff0000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #00abff,#ff00c7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #00abff, #ff00c7 70%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip:text;
+  color:transparent;
+   
+
+}
+.sub_Box h2{
+    font-size: 15px;
+    display: flex;
+  
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+     padding: 10px 10px 0px 10px;
+    transition:all .5s;
+}
+.sub_Box p{
+     transform: scale(0);
+    font-size: 10px;
+    font-weight: 200;
+    color: silver;
+    font-family: 'Poppins', sans-serif;
+   text-align: center;
+    transition:all .5s;
+    padding: 10px ;
+    width: 100%;
+}
+
+
+
+
+/*
+.boxs:nth-child(1){
+    background: linear-gradient(45deg,#0003c2,#0081ff)
+ }
+.boxs:nth-child(2){
+   background: linear-gradient(45deg,#ff009d,#7a0089)
+}
+.boxs:nth-child(3){
+    background:#ff00b2;
+}
+.boxs:nth-child(4){
+    background:#40ffcb;
+}
+.boxs:nth-child(5){
+    background: #40a1ff;
+   
+}
+.boxs:nth-child(6){
+    background: #40a1ff;
+   
+}
+*/
+
+.boxs:hover{
+  
+     transform: scale(1.1);
+}
+.boxs:hover i{
+    font-size: 40px;
+    color: white;
+    padding-top: 15px;
+}
+.boxs:hover h2{
+    font-size: 20px;
+}
+.boxs:hover p{
+    color: silver;
+    transform: scale(1);
+}
+
+
+/* mis images de trabajo */
+
+.my_jobs{
+  width: 100%;
+  padding-top: 50px;
+  
+}
+.my_jobs h2{
+    color: whitesmoke;
+    font-family: 'Outfit', sans-serif;
+    padding: 30px 0px 0px 30px ;
+}
+.my_jobs p{
+    color:silver;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    width: 400px;
+    padding: 30px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+.container_jobs{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-gap: 2em;
+    position: relative;
+}
+.boxs2{
+    width: 100%;
+    overflow: hidden;
+    transition:  all .3s;
+    
+}
+.boxs2 div{
+   width: 100%;
+   height: 100%;
+   margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+/*
+orden de las columnas*/
+
+
+.boxs2 div img{
+   width: 100%;
+   transition: all .5s;
+   object-fit: cover;
+   margin: auto;
+}
+
+
+
+.cta{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--cbox);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: var(--shadow);
+}
+
+/*class añadido por js*/
+
+.resaltar .btnCta{
+    background: var(--cbox);
+    animation: resaltando 2s infinite;
+    border-radiud:10px ;
+}
+@keyframes resaltando {
+ 0%{transform: scale(.8);}
+ 50%{transform: scale(1);}
+ 100%{transform: scale(.8);}
+}
+
+.cta .copy{
+    padding: 20px;
+}
+.cta .copy h5{
+    color: whitesmoke;
+    text-align: left;
+    font-size: 20px;
+}
+.cta .copy p{
+    font-size: 10px;
+    color: silver;
+    text-align: left;
+}
+.cta .btnCta{
+    width: 200px;
+    height: 50px;
+     background:var(--cbutton);
+     border-radius: 10px;
+     
+}
+.cta .btnCta button{
+    width: 100%;
+    height: 50px;
+    font-family: 'Poppins','sans serif';
+    font-size: 20px;
+    color: whitesmoke;
+    border: none;
+    background: transparent;
+}
+.cta .btnCta button:focus{
+    outline: none;
+}
+.cta .btnCta:hover{
+    background: whitesmoke;
+}
+.cta .btnCta:hover button{
+    color:#00abff ;
+}
+
+.footer{
+    padding: 30px;
+    background: ;
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--cbox);
+    margin-top: 100px;
+}
+.footer p{
+    color: silver;
+    font-family: 'Poppins','sans serif';
+    font-size: 10px;
+    
+}
+.footer span{
+    color: #d7d7d7;
+    font-family: 'Poppins','sans serif';
+    font-size: 15px;
+}
+
+
+.footer div a{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+
+
+@media(max-width:768px){
+    
+  .container{
+      display: block;
+  }
+  .header{
+      width: 50px;
+      height: 70px;
+      position:fixed;
+      display: flex;
+      border-radius:0px 0px 200px 0px;
+      align-items: center;
+      justify-content: center;
+      transition: 1s;
+      z-index: 1000;
+      overflow: hidden;
+   
+
+  }
+  
+  
+  
+  
+  .header .menu{
+      display: flex;
+      
+  }
+  
+  /* este elemento seta aplicado cuan se le de click en el btn menu */
+  .desplegado{
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      /*border-radius: 0%;*/
+      /* From https://css.glass */
+background: rgba(9, 9, 33, 0.5);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+  }
+  
+  #menu_icon{
+  font-size: 35px;
+      background: #ff0000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #00abff,#ff00c7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #00abff, #ff00c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  }
+  
+ .header .menu p{
+     display: none;
+     
+     padding: 10px;
+  
+     
+ }.header .menu p i{
+     font-size: 40px;
+     font-weight: 600;
+ }
+ /* class para darle estilo a la lista de menu sonlo en movil */
+ 
+ .menu_list{
+     display: none;
+    
+ }
+ .menu_list_actived{
+     display: flex;
+      flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding-top: 100px 0px 0px 0px;
+     
+     transition: 1s;
+     
+ }
+ .menu_list_actived .btns{
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Roboto', sans-serif;
+     width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+     transition:all 1s;
+     border-radius: 5px;
+ }
+ .menu_list_actived .btns i{
+     font-size: 15px;
+     padding-left: 20px;
+  
+ }.menu_list_actived .btns span{
+     padding-left: 20px;
+     font-size: 15px;
+ }
+ .btns:hover{
+      background: rgba(0,100,155,.6);
+    transition: .3s;
+ }
+ .btns:hover span{
+     background: transparent;
+ }
+ .menu_list_actived .btns:hover i{
+     font-size: 30px;
+     padding-left: 45px;
+     transition: .5s;
+ }
+ .cerrarMenuBtn{
+ display: flex;
+ transition: .3s;
+ align-items: center;
+ justify-content: center;
+     
+ }
+ .header .menu i{
+    color: white;
+    font-size: 25px;
+ }
+  .btns{
+      display: none;
+   
+      
+  }
+  .btns i{
+      display: block;
+  }
+  
+  
+  /* estilo de seccion del perfil en mivil */
+  
+  .seccion_perfil{
+      width: 100%;
+      height:100vh;
+      position: relative;
+      align-items: flex-start;
+      justify-content: center;
+  }
+  .foto{
+   width: 100%;
+   }
+  .foto img{
+      height: 100%;
+  }
+  .title{
+      width:100%;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 0px 20px 0px;
+      transition: all .3s;
+      position: absolute;
+      bottom: 0;
+      border: none;
+  }
+  .title h1{
+      font-size: 30px;
+  }
+  .social_icons{
+      padding-top: 80px;
+  }
+  
+   
+  .logo img{
+   height: 100vh;
+   transform: translateX(0);
+   opacity: 10%;
+}
+
+  .aboutme{
+     width: 100%;
+     height: auto;
+     display: block;
+     padding: 50px 0px 30px 0px; 
+     width: 100%;
+  }
+  .aboutme .parrafo{
+      width: 100%;
+  }
+  .aboutme .imagen{
+      display: none;
+  }
+  .services{
+      padding-top: 50px;
+  }
+  .services h2{
+      padding-left: 10px;
+  }
+  .services p{
+      width: 100%;
+      padding: 10px 10px 30px 10px;
+  }
+  .container_services{
+      grid-template-columns: 1fr ;
+      grid-row: auto;
+      grid-gap: 1em;
+  }
+  
+  .boxs{
+     min-height: 200px;  
+     border-radius: 5px;
+  }
+  .boxs p{
+      font-size: 12px;
+      font-weight: 200;
+  }
+
+ 
+ .my_jobs{
+     width: 100%;
+     padding: 10px;
+ }
+  .my_jobs h2{
+      padding: 50px 10px 0px 10px;
+  }
+    .my_jobs p{
+      width: 100%;
+      padding: 10px 10px 30px 10px;
+  }
+  
+ .container_jobs{
+   
+   grid-template-columns: 1fr 1fr ;
+   grid-template-rows: auto;
+
+}
+
+/*
+.boxs2:nth-child(1){
+    grid-row: 1/2;
+   
+}
+.boxs2:nth-child(2){
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.boxs2:nth-child(3){
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.boxs2:nth-child(4){
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.boxs2:nth-child(5){
+    grid-column: 2/3;
+    grid-row: 2/5;
+}
+*/
+
+.cta{
+    width: 95%;
+    margin: auto;
+    flex-direction: column;
+    border: 2px solid transparent;
+   margin-top: 100px;
+}
+ .cta .btnCta{
+    width: 260px;
+    
+    }
+ 
+ 
+ .footer
+{
+    flex-direction: column;
+}
+.footer div{
+    padding: 40px;
+}
+ .boxs:hover {
+     transform: scale(1);
+ }
+ /*class que sera añadido por js*/
+.addHover .sub_Box{
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7) 70%);
+    transition: all .3s;
+    
+}
+.addHover .sub_Box p{
+    transform: scale(1);
+}
+.addHover .sub_Box span i{
+    color:white;
+}
+
+.marco .coint{
+    width: 100%; 
+    height: 100%;
+    
+}
+.coint .caja_img{
+    width: 95%;
+    height: auto;
+    
+}
+.coint .caja_img img{
+    width: 100%;
+}
+ .coint .info{
+    width: 100%;
+}
+
+ 
+}
